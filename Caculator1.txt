@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace First_C_SharpControlStudioProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string s = "";
+            double a = 0;
+            double b = 0;
+            Console.WriteLine("请输入a的值:");
+            a = Convert.ToDouble( Console.ReadLine());
+          
+            Console.WriteLine("请输入b的值:");
+            b = Convert.ToDouble(Console.ReadLine());
+
+            bool flag = true;
+            Console.WriteLine("请输入您要进行的运算的符号:");
+            while (flag)
+            {
+                s = Console.ReadLine();
+
+                if (s == "+")
+                {
+                    Console.WriteLine("运算结果为:");
+                    Console.WriteLine("{0}+{1}={2}", a, b, (double)(a + b));
+                    flag = false;
+                }
+                else if (s == "-")
+                {
+                    Console.WriteLine("运算结果为:");
+                    Console.WriteLine("{0}-{1}={2}", a, b, (double)(a - b));
+                    flag = false;
+                }
+                else if (s == "*")
+                {
+                    Console.WriteLine("运算结果为:");
+                    Console.WriteLine("{0}*{1}={2}", a, b, (double)(a * b));
+                    flag = false;
+                }
+                else if (s == "/")
+                {
+                    Console.WriteLine("运算结果为:");
+                    Console.WriteLine("{0}/{1}={2}", a, b, (double)(a / b));
+                    flag = false;
+                }
+                else
+                {
+                    Console.WriteLine("您输入的运算符号不存在！请重新输入:");
+                   
+                }
+            }
+            Console.ReadKey();
+          
+
+        }
+    }
+}
