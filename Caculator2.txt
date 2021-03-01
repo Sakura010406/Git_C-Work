@@ -1,0 +1,116 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace My_First_C_Sharp
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        string s = "";
+        double a=0;
+        double b=0;
+        double ret=0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            label4.Text="您选择了除法！";
+            s = "/";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label4.Text = "您选择了加法！";
+            s = "+";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            label4.Text = "您选择了减法！";
+            s = "-";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label4.Text = "您选择了乘法！";
+            s = "*";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            a = double.Parse(textBox1.Text);
+
+            b = double.Parse(textBox2.Text);
+
+            if (s == "+")
+            {
+                ret = a + b;
+                label3.Text = "a " + s + " b = "+ret.ToString();
+
+
+            }
+            else if (s == "-")
+            {
+                ret = a - b;
+                label3.Text = "a " + s + " b = " + ret.ToString();
+
+            }
+            else if (s == "*")
+            {
+                ret = a * b;
+                label3.Text = "a " + s + " b = " + ret.ToString();
+
+            }
+            else 
+            {
+                ret = a / b;
+                label3.Text = "a " + s + " b = " + ret.ToString();
+
+            }         
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
